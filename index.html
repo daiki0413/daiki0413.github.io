@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="canonical" href="https://lopan.jp/css-animation">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed">
+    <link rel="stylesheet" href="jojo.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="canonical" href="https://lopan.jp/css-animation">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+    jQuery(document).ready(function() {
+    var offset = 100;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+    if (jQuery(this).scrollTop() > offset) {
+    jQuery('.pagetop').fadeIn(duration);
+    } else {
+    jQuery('.pagetop').fadeOut(duration);
+    }
+    });
+    
+    jQuery('.pagetop').click(function(event) {
+    event.preventDefault();
+    jQuery('html, body').animate({scrollTop: 0}, duration);
+    return false;
+    })
+    });
+    </script>
+    <title>JOJO</title>
+</head>
+<body>
+    <div id="wrapper">
+    <!--ドロワー-->
+    <input type="checkbox" id="navTgl">
+    <label for="navTgl" class="open"><span></span></label>
+    <label for="navTgl" class="close"></label>
+    <nav class="menu">
+    	<a href=""><img src="images/h-2.png" id="h-2"></img></a>
+            <ul>
+                <li><a href="">TOP</a></li>
+                <li><a href="">NEWS</a></li>
+                <li><a href="">ONAIR</a></li>
+                <li><a href="">STAFF/CAST</a></li>
+                <li><a href="">CHARACTER</a></li>
+                <li><a href="">STORY</a></li>
+                <li><a href="">MOVIE</a></li>
+                <li><a href="">Blu-ray/DVD&nbsp;MUSIC</a></li>
+                <li><a href="">GOODS</a></li>
+                <li><a href="">APP</a></li>
+            </ul>
+    </nav>
+    <!--nav-->
+    <div class="contents">   
+        <header>
+    		<nav>
+                <ul>
+                    <li><a href="">TOP</a></li>
+                    <li><a href="">NEWS</a></li>
+                    <li><a href="">ONAIR</a></li>
+                    <li><a href="">STAFF/CAST</a></li>
+                    <li><a href="">CHARACTER</a></li>
+                    <li><a href="">STORY</a></li>
+                    <li><a href="">MOVIE</a></li>
+                    <li><a href="">Blu-ray/DVD&nbsp;MUSIC</a></li>
+                    <li><a href="">GOODS</a></li>
+                    <li><a href="">APP</a></li>
+                </ul>    		
+    		</nav>
+    	</header>
+    <!--HOME-->
+    <div class="f-1">
+        <img class="pc" src="images/f-3.jpg"></img>
+        <img class="sp" src="images/h-1.jpg"></img>
+        <div class="f-2">
+            <a href=""><img src="images/f-4.png" id="f-2"></img></a>
+            <a href=""><img src="images/f-5.png" id="f-2"></img></a>
+            <a href=""><img src="images/f-6.png" id="f-2"></img></a>
+            <a href=""><img src="images/f-7.png" id="f-2"></img></a>
+            <a href=""><img src="images/f-8.png" id="f-2"></img></a>
+            <a href=""><img src="images/f-9.jpg" id="f-2"></img></a>
+        </div>
+    </div>
+    <!--MOVIE-->
+    <div class="f-3">
+        <img src="images/f-10.1.png" id="f-3"></img>
+        <iframe width="560" height="315" id="movie" src="https://www.youtube.com/embed/2Nqgca3eNSg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="f-4">
+        <!--NEWS-->
+        <div class="f-5">
+            <img src="images/f-11.png" id="f-5"></img>
+            <div class="f-6">
+                <a href=""><img src="images/f-17.png" id="f-6"></img></a>
+                <a href=""><img src="images/f-18.jpg" id="f-6"></img></a>
+                <a href=""><img src="images/f-19.png" id="f-6"></img></a>
+                <a href=""><img src="images/f-20.png" id="f-6"></img></a>
+            </div>    
+            <div class="f-7">
+                <p><a href=""><span>2020.06.29</span><br>
+                2020年7月4日（土）正午～ 全世界配信スタート！！<br>ワーナー ブラザース ジャパン デジタルパネル「Stay connected with Anime」「ジョジョの奇妙な冒険 黄金の風」コーナーゲスト＆詳細発表！！</a></p>
+                <p><a href=""><span>2020.06.09</span><br>
+                ワーナー ブラザース ジャパン デジタルパネル開催決定！！<br>
+                Warner Bros. Japan annouces its first online streaming event!</a></p>
+                <p><a href=""><span>2020.03.25</span><br>
+                「岸辺露伴は動かない」OVA発売記念 奇譚見聞録 特別生配信 実施決定！！</a></p>
+                <p><a href=""><span>2020.02.28</span><br>
+                「懺悔室」新PV解禁！！若い男役・高橋広樹インタビューを掲載したBizarre Journal Vol.3同時解禁</a></p>
+            </div>            
+            <a href=""><img src="images/f-14.png" id="f-14"></img></a>
+        </div>
+        <!--TWITTER-->
+        <div class="f-8">
+            <img src="images/f-12.0.png" id="f-5"></img>
+            <img src="images/f-12.5.jpg" id="f-12"></img>
+            <div class="f-9">    
+                TVアニメ『ジョジョの奇妙な冒険』公式<br>@anime_jojo
+            </div>    
+            <span1><a class="twitter-timeline" data-width="400" data-height="300" href="https://twitter.com/anime_jojo?ref_src=twsrc%5Etfw">Tweets by anime_jojo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span1>
+            <span3><a class="twitter-timeline" data-width="300" data-height="250" href="https://twitter.com/anime_jojo?ref_src=twsrc%5Etfw">Tweets by anime_jojo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span3>
+        </div>
+    </div>
+    <div class="s-1">
+        <!--ONAIR-->
+        <img src="images/s-1.png" id="s-1"></img>
+        <div class="s-2">
+            見放題配信<br>
+            AbemaTV、dアニメストア、Hulu、U-NEXT、NETFLIX、アニメ放題、dTV、FOD、Telasa他
+        </div>
+        <div class="s-3">
+            課金配信<br>
+            ひかりＴＶ、J:COM オンデマンド、milplus(みるプラス）、<br>
+            イッツコムオンデマンド、TOKAIオンデマンド、ビデオパス、TSUTAYA TV、<br>
+            PlayStation™Video、Google Play™、Rakuten TV、Amazon Prime Video、<br>
+            ビデオ・マーケット、バンダイチャンネル他<br>
+        </div>
+        <div class="s-4">
+            テレビ放送<br>
+            <span4>2018年10月5日より<br>
+            放送開始<br></span4>
+        </div>
+        <div class="s-5">
+            <div class="s-6">
+                TOKYO MX<br>毎日放送<br>BS11<br>AbemaTV<br>アニマックス
+            </div>
+            <div class="s-7">
+                毎週金曜 25：05 ～<br>毎週金曜 26：55 ～<br>毎週金曜 25：30 ～<br>毎週日曜 24：00～<br>毎週日曜 19：00～
+            </div>        
+            <p>※放送時間は変更になる場合がございます。</p>
+        </div>
+        <a href=""><img src="images/f-14.png" id="s-5"></img></a>
+        <!--STAFF/CAST-->
+        <img src="images/s-2.png" id="s-2"></img>
+        <div class="s-8">
+            原作： 荒木飛呂彦（集英社ジャンプ コミックス刊）<br>
+            総監督： 津田尚克 ／ 監督： 木村泰大・髙橋秀弥 ／<br>
+            シリーズ構成： 小林靖子 ／ キャラクターデザイン： 岸田隆宏 ／ 総作画監督： 石本峻一 ／<br>
+            スタンドデザイン・アクションディレクター： 片山貴仁 ／ プロップデザイン： 宝谷幸稔 ／<br>
+            美術設定： 滝れーき・長澤順子・青木薫 ／ 色彩設計： 佐藤裕子 ／<br>
+            撮影監督： 山田和弘 ／ 編集： 廣瀬清志 ／ 音響監督： 岩浪美和 ／ 音楽： 菅野祐悟 ／<br>
+            アニメーション制作： david production
+        </div>    
+        <div class="s-9">
+            ジョルノ・ジョバァーナ：<br>
+            ブローノ・ブチャラティ：<br>
+            レオーネ・アバッキオ：<br>
+            グイード・ミスタ：<br>
+            ナランチャ・ギルガ：<br>
+            パンナコッタ・フーゴ：<br>
+            トリッシュ・ウナ：<br>
+            ボス：
+        </div>
+        <div class="s-10">
+            小野賢章<br>
+            中村悠一<br>
+            諏訪部順一<br>
+            鳥海浩輔<br>
+            山下大輝<br>
+            榎木淳弥<br>
+            千本木彩花<br>
+            小西克幸
+        </div>
+        <!--STORY-->
+        <img src="images/s-6.png" id="s-6"></img>
+        <div class="s-11">
+            イタリア裏社会を牛耳るギャング組織「パッショーネ」に属する青年ジョルノ・ジョバァーナ。<br>
+            彼には街に麻薬を流す組織の「ボス」を倒し、街から麻薬を排除するという夢があった。<br>
+            謎に秘められたボスに近づくため、同じ夢を抱く幹部のブローノ・ブチャラティ率いるチームと共に<br>
+            ボスの娘トリッシュ・ウナの護衛指令を果たしたジョルノたち。<br>
+            しかしその指令の真の目的は、ボスの正体の手掛かりとなるトリッシュを<br>
+            ボス自らの手で確実に葬ることだった。<br>
+            非道な行いを見過ごすことができなかったブチャラティは、組織を裏切ることを決意。<br>
+            ジョルノやレオーネ・アバッキオ、グイード・ミスタ、ナランチャ・ギルガも、<br>
+            それぞれの意志で組織を裏切り、ブチャラティと行動を共にすることを選択する。<br>
+            『正義』を信じ『苦難の道』を歩み始めたジョルノたちに、『運命』が立ちはだかる。
+        </div>
+        <a href=""><img src="images/f-14.png" id="s-11"></img></a>
+    </div>
+    <!--CHARACTER-->
+    <div class="t-1">
+        <img src="images/t-1.png" id="t-1"></img>
+        <img src="images/t-2.png" id="t-2"></img>
+        <img src="images/t-3.png" id="t-3"></img>
+        <!--slideshow-->
+        <div class="slideshow">
+        	<input type="radio" name="slideshow" id="switch1" checked>
+        	<input type="radio" name="slideshow" id="switch2">
+        	<input type="radio" name="slideshow" id="switch3">
+        	<input type="radio" name="slideshow" id="switch4">
+        	<input type="radio" name="slideshow" id="switch5">
+        	<div class="slideContents">
+        		<section id="slide1">
+        			<img src="images/t-41.png" id="t-41">
+        			<img src="images/t-43.png" id="t-43">
+        		    <img src="images/t-42.png" id="t-42">
+        		    <img src="images/h-5.png" id="h-5">
+            	</section>
+        		<section id="slide2">
+        			<img src="images/t-51.png" id="t-51">
+        			<img src="images/t-53.png" id="t-53">
+        			<img src="images/t-52.png" id="t-52">
+        			<img src="images/h-6.png" id="h-6">
+        		</section>
+        		<section id="slide3">
+        			<img src="images/t-61.png" id="t-61">
+        			<img src="images/t-62.png" id="t-62">
+        			<img src="images/t-63.png" id="t-63">
+        			<img src="images/h-7.png" id="h-7">
+        		</section>
+        		<section id="slide4">
+        			<img src="images/t-71.png" id="t-71">
+        			<img src="images/t-73.png" id="t-73">
+        			<img src="images/t-72.png" id="t-72">
+        			<img src="images/h-8.png" id="h-8">
+        		</section>
+        		<section id="slide5">
+        			<img src="images/t-81.png" id="t-81">
+        			<img src="images/t-83.png" id="t-83">
+        			<img src="images/t-82.png" id="t-82">
+        			<img src="images/h-9.png" id="h-9">
+        		</section>
+        	</div>
+        	<p class="arrow prev">
+        	    <img src="images/t-97.png" id="t-97"></img>
+        		<label for="switch1"></label>
+        		<label for="switch2"></label>
+        		<label for="switch3"></label>
+        		<label for="switch4"></label>
+        		<label for="switch5"></label>
+        	</p>
+        	<p class="arrow next">
+        		<img src="images/t-97.png" id="t-98" style="transform: rotate(180deg);"></img>
+        		<label for="switch1"></label>
+        		<label for="switch2"></label>
+        		<label for="switch3"></label>
+        		<label for="switch4"></label>
+        		<label for="switch5"></label>
+        	</p>
+        </div>
+    </div>
+    <!--NAV-->
+    <div class="t-2">
+        <img src="images/h-12.svg" id="h-12"></img>
+        <div class="t-3">
+            TOP<br>
+            ONAIR<br>
+            CHARACTER<br>
+            MOVIE<br>
+            GOODS
+        </div>
+        <div class="t-4">
+            NEWS<br>
+            STAFF/CAST<br>
+            STORY<br>
+            Blu-ray/DVD MUSIC<br>
+            APP
+        </div>        
+        <a href="https://twitter.com/anime_jojo?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Aanime_jojo&ref_url=https%3A%2F%2Flopan.jp%2Fcss-animation" target="_blank"><img src="images/f-1.png" id="f-1"></img></a>
+        <a href="https://ja-jp.facebook.com/JoJosBizarreAdventureTW" target="_blank"><img src="images/f-2.png" id="f-20"></img></a>
+    </div>
+    <!--LAST-->
+    <div class="t-5">
+        <ul>
+            <li><a href=""><img src="images/l-1.png"></img></a></li>
+            <li><a href=""><img src="images/l-2.png"></img></a></li>
+            <li><a href=""><img src="images/l-3.png"></img></a></li>
+            <li><a href=""><img src="images/l-4.png"></img></a></li>
+            <li><a href=""><img src="images/l-5.png"></img></a></li>
+        </ul>    
+    </div>
+    <!--NAV-->
+    <div class="t-6">
+        <ul>
+            <li><a href=""><img src="images/h-13.png" id="h-13"></img></a></li>
+            <li><a href=""><img src="images/h-14.png" id="h-13"></img></a></li>
+            <li><a href=""><img src="images/h-15.png" id="h-13"></img></a></li>
+            <div class="s">
+            <li><a href=""><img src="images/h-16.png" id="h-14"></img></a></li>
+            <li><a href=""><img src="images/h-17.png" id="h-14"></img></a></li>
+            </div>
+        </ul>         
+    </div>
+    <!--戻るボタン-->
+    <div class="pagetop"><img src="images/l-7.png" id="l-7"></img></div>
+    <!--contentsの終わり-->
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <img src="images/l-6.png" id="l-6"></img>
+        <div class="l-1">
+            ©LUCKY LAND COMMUNICATIONS/集英社・ジョジョの奇妙な冒険GW製作委員会<br>
+            この番組はフィクションであり、登場する人物、団体、場所、事件等は実在のものとは一切関係ありません。
+        </div>
+    </footer>    
+    <!--wrapperの終わり-->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
