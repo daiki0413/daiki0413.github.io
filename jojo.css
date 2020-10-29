@@ -1,0 +1,1089 @@
+*{
+    padding:0;
+    margin:0;
+}
+body {
+	background: url(/assets/img/bg.jpg);
+}
+.contents {
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#navTgl:checked ~ .contents {
+	transform: translateX(250px);
+}
+
+/*ボタン動き*/
+#navTgl {
+	display: none;
+}
+label {
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.open {
+	z-index: 2;
+	width: 48px;
+	height: 48px;
+	background:#1e1b24;
+	transition: background .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.open::before,
+.open::after {
+	content: "";
+}
+.open span,
+.open::before,
+.open::after {
+	content: "";
+	position: absolute;
+	top: calc(50% - 1px);
+	left: 30%;
+	width: 40%;
+	border-bottom: 2px solid #9f7203;
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.open::before {
+	transform: translateY(-8px);
+}
+.open::after {
+	transform: translateY(8px);
+}
+.close {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	transition: background .6s;
+}
+#navTgl:checked + .open {
+	background:#1e1b24;
+	transform: translateX(320px);
+}
+#navTgl:checked + .open span {
+	transform: scaleX(0);
+}
+#navTgl:checked + .open::before {
+	transform: rotate(45deg);
+}
+#navTgl:checked + .open::after {
+	transform: rotate(-45deg);
+}
+#navTgl:checked ~ .close {
+	pointer-events: auto;
+	background: rgba(0,0,0,.3);
+}
+
+/*スマホ*/
+#h-2{
+    width:70%;
+    margin:0 auto;
+    margin-top:10px;
+}
+.menu {
+    background:#1e1b24;
+	z-index: 1;
+	position: fixed;
+	overflow: auto;
+	top: 0;
+	left: 0;
+	width: 370px;
+	height: 95%;
+	box-sizing: border-box;
+	transform: translateX(-100%);
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu a {
+	color:#9f7203;
+	font-size:17px;
+	font-weight:bold;
+	font-family:'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+	text-align:center;
+	display: block;
+	text-decoration: inherit;
+	transition: background .6s;
+	padding-top:10px;
+}
+.menu ul {
+    /*background:blue;*/
+    margin-top:30px;
+}
+.menu ul li a:hover{
+	color:#E20082;
+	text-decoration:none;
+}
+
+#navTgl:checked ~ .menu {
+	transform: none;
+}
+
+/*ボタン*/
+header {
+	position: relative;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+/*パソコン*/
+header nav {
+    background:linear-gradient(to left, #b2aa82, #fffbe9, #b2aa82);
+    height:80px;
+    width:1263px;
+    padding-top:10px;
+    border-bottom:solid #9f7203;
+}
+header nav ul {
+    font-size:17px;
+    width:1150px;
+    margin-left:50px;
+	display: flex;
+	white-space: nowrap;
+}
+header nav li {
+    /*background:green;*/
+	display: flex;
+	flex-basis: 20%;
+}
+header nav li a {
+    color:#9f7203;
+    font-weight:bold;
+    font-family:'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	transition: background .3s;
+}
+header nav li a:hover {
+	color:#E20082;
+	text-decoration:none;
+}
+
+/*パソコン*/
+@media screen and (min-width: 481px) {
+/*ドロワー&ナブ*/
+.open {
+	display: none;
+}
+/*メイン画像*/
+.pc{
+	display:block;
+	width:100%;
+	margin-top:-40px;
+}
+.sp{
+	display:none;
+}
+/*露伴*/
+.f-2{
+	width:350px;
+	margin:-650px -900px 650px 900px;
+}
+#f-2{
+	width:100%;
+	padding:5px;
+}
+/*動画*/
+.f-3{
+	background: url(images/back3.png);
+	margin-top:-565px;
+	width:100%;
+	height:550px;
+}
+#f-3{
+	margin:-380px -450px 380px 450px;
+}
+#movie{
+	margin-top:150px;
+	border:solid #9f7203;
+}
+.f-4{
+	background:url(images/back1.png);
+	width:100%;
+	height:750px;
+	padding-top:70px;
+}
+/*NEWS*/
+.f-5{
+	background:url(images/f-13.png);
+	background-repeat:no-repeat;
+	width:550px;
+	height:500px;
+	margin:0px -100px 0px 100px;
+}
+#f-5{
+	margin:-20px -150px 20px 150px;
+}
+/*写真*/
+.f-6{
+	/*background:red;*/
+	width:100px;
+	height:400px;
+	margin:-20px -50px 20px 50px;
+}
+#f-6{
+	width:100%;
+	padding-top:20px;
+}
+/*文字*/
+.f-7{
+	/*background:pink;*/
+	width:330px;
+	height:400px;
+	margin:-420px -160px 420px 160px;
+	font-weight:600;
+}
+.f-7 a{
+	color:black;
+}
+.f-7 a:hover{
+	color:black;
+	text-decoration:none;
+}
+span{
+	color:#E4007E;
+}
+#f-14{
+	width:50%;
+	margin:-450px -150px 450px 150px;
+}
+/*Twitter*/
+.f-8{
+	background:url(images/f-13.png);
+	background-repeat:no-repeat;
+	width:550px;
+	height:500px;
+	margin:-450px -650px 450px 650px;
+}
+#f-12{
+	width:10%;
+	border-radius:50px;
+	margin:50px 150px -50px -150px;
+}
+.f-9{
+	/*background:red;*/
+	width:400px;
+	font-weight:600;
+	font-size:17px;
+	margin:-5px -100px 5px 100px;
+}
+span1{
+	margin:50px -70px -50px 70px;
+}
+span3{
+	display:none;
+}
+.s-1{
+	background:url(images/back2.png);
+	background-repeat:no-repeat;
+	margin-top:-100px;
+	width:100%;
+	height:3000px;
+	font-size:20px;
+	color:white;
+	text-align:center;
+	font-weight:bold;
+	font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+}
+/*ONAIR*/
+#s-1{
+	margin-top:150px;
+}
+.s-2{
+	/*background:red;*/
+	margin-top:20px;
+}
+.s-3{
+	/*background:green;*/
+	margin-top:20px;
+}
+.s-4{
+	/*background:blue;*/
+	margin-top:20px;
+}
+span4{
+	font-size:40px;
+}
+.s-5{
+	/*background:red;*/
+	margin-top:20px;
+	font-size:15px;
+	height:350px;
+}
+.s-6{
+	/*background:green;*/
+	font-size:28px;
+	width:200px;
+	height:300px;
+	text-align:left;
+	margin-left:400px;
+	line-height:60px;
+}
+.s-7{
+	/*background:blue;*/
+	font-size:28px;
+	width:300px;
+	height:300px;
+	text-align:left;
+	margin:-300px -600px 300px 600px;
+	line-height:60px;
+}
+.s-5 p{
+	/*background:pink;*/
+	margin-top:-290px;
+}
+#s-5{
+	width:25%;
+	margin:50px -300px 50px 300px;
+}
+/*STAFF/CAST*/
+#s-2{
+	margin:130px 170px -130px -170px;
+}
+.s-8{
+	/*background:green;*/
+	margin-top:80px;
+	line-height:40px;
+}
+.s-9{
+	/*background:red;*/
+	width:300px;
+	margin:30px -350px -30px 350px;
+	text-align:right;
+	line-height:60px;
+}
+.s-10{
+	/*background:blue;*/
+	width:300px;
+	margin:-480px -650px 480px 650px;
+	text-align:left;
+	line-height:60px;
+	font-size:25px;
+}
+/*STORY*/
+#s-6{
+	/*background:blue;*/
+	margin-top:-600px;
+}
+.s-11{
+	/*background:red;*/
+	color:black;
+	line-height:45px;
+	margin-top:-250px;
+}
+#s-11{
+	margin-top:30px;
+	width:20%;
+}
+/*CHARACTER*/
+.t-1{
+    background:linear-gradient(to top, #b2aa82, #fffbe9, #b2aa82);
+	width:100%;
+    height:950px;
+    margin-top:-90px;
+}
+#t-1{
+	margin:0 -300px 0px 300px;
+}
+#t-2{
+	width:27%;
+	margin:0px 640px 0px -640px;
+}
+#t-3{
+	width:27%;
+	margin:-210px -920px 210px 920px;
+}
+/*スライド*/
+.slideshow {
+	margin-top:-250px;
+	position: relative;
+	overflow: hidden;
+}
+input[name="slideshow"] {
+	display: none;
+}
+/*スライド内容*/
+.slideContents {
+	height:700px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	user-select: none;
+	transition: transform .6s;
+}
+.slideContents section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: translateX(100%);
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.slideContents section img {
+	max-width: 100%;
+	padding: 0 50px;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+/*矢印*/
+.arrow,
+.arrow label{
+	position: absolute;
+}
+.arrow {
+	top: 0;
+	margin: 0;
+	transition: background .3s;
+}
+.prev {
+	margin:300px -30px -300px 30px;
+}
+.next {
+	margin:300px -1150px -300px 1150px;
+}
+.arrow,
+.arrow label {
+	cursor: pointer;
+	width: 50px;
+	height: 100px;
+}
+.arrow label {
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+/*ジョルノ*/
+#t-42{
+	margin:-700px -50px 700px 50px;
+}
+#t-43{
+	margin:-700px -600px 700px 600px;
+}
+/*ブチャラティ*/
+#t-52{
+	margin:-700px -100px 700px 100px;
+}
+#t-53{
+	margin:-700px -550px 700px 550px;
+}
+/*ミスタ*/
+#t-63{
+	margin:-700px -250px 700px 250px;
+}
+#t-62{
+	margin:-680px -400px 680px 400px;
+}
+/*アバッキオ*/
+#t-72{
+	width:30%;
+	margin:-700px -100px 700px 100px;
+}
+#t-73{
+	width:24%;
+	margin:-700px -580px 700px 580px;
+}
+/*ナランチャ*/
+#t-82{
+	margin:-700px -100px 700px 100px;
+}
+#t-83{
+	width:25%;
+	margin:-990px -540px 990px 540px;
+}
+/* :::::: mechanism :::::: */
+#switch1:checked ~ .slideContents #slide1,
+#switch2:checked ~ .slideContents #slide2,
+#switch3:checked ~ .slideContents #slide3,
+#switch4:checked ~ .slideContents #slide4,
+#switch5:checked ~ .slideContents #slide5 {
+	position: relative;
+	transform: none;
+}
+#switch1:checked ~ .slideContents #slide5,
+#switch1:checked ~ .slideContents #slide4,
+#switch2:checked ~ .slideContents #slide1,
+#switch2:checked ~ .slideContents #slide5,
+#switch3:checked ~ .slideContents #slide2,
+#switch3:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide3,
+#switch4:checked ~ .slideContents #slide2,
+#switch5:checked ~ .slideContents #slide4,
+#switch5:checked ~ .slideContents #slide3 {
+	transform: translateX(-100%);
+}
+#switch1:checked ~ .slideContents #slide3,
+#switch1:checked ~ .slideContents #slide4,
+#switch2:checked ~ .slideContents #slide4,
+#switch2:checked ~ .slideContents #slide5,
+#switch3:checked ~ .slideContents #slide5,
+#switch3:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide2,
+#switch5:checked ~ .slideContents #slide2,
+#switch5:checked ~ .slideContents #slide3 {
+	transition-duration: 0s;
+}
+
+/* :::::: arrow mechanism :::::: */
+.arrow label {
+	pointer-events: none;
+}
+#switch1:checked ~ .prev label[for="switch5"],
+#switch2:checked ~ .prev label[for="switch1"],
+#switch3:checked ~ .prev label[for="switch2"],
+#switch4:checked ~ .prev label[for="switch3"],
+#switch5:checked ~ .prev label[for="switch4"],
+#switch1:checked ~ .next label[for="switch2"],
+#switch2:checked ~ .next label[for="switch3"],
+#switch3:checked ~ .next label[for="switch4"],
+#switch4:checked ~ .next label[for="switch5"],
+#switch5:checked ~ .next label[for="switch1"] {
+	pointer-events: auto;
+}
+/*NAV*/
+.t-2{
+	display:none;
+}
+/*LAST*/
+.t-5{
+	background:url(images/back1.png);
+	width:100%;
+	height:150px;
+	padding-top:30px;
+}
+.t-5 ul{
+	width:90%;
+	/*background:red;*/
+	margin-left:80px;
+}
+.t-5 ul li{
+	display:inline;
+	margin-left:10px;
+}
+.t-6{
+	display:none;
+}
+/* 上に戻るボタン */
+.pagetop {
+	background-color: rgba(0,0,0,0.3);
+	text-decoration: none;
+	display: none;
+	position: fixed;
+	bottom: 8rem;
+	right: 4rem;
+	font-size: 1.5rem;
+	width: 3.3rem;
+	height: 3.3rem;
+	line-height: 3.3rem;
+	border-radius: 3.3rem;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+}
+.pagetop:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.200em);
+}
+#l-7{
+	width:180%;
+	margin:-10px 20px 10px -20px;
+}
+footer{
+	background:black;
+	width:100%;
+	height:160px;
+}
+#l-6{
+	/*background:blue;*/
+	width:7%;
+	margin:35px -200px -35px 200px;
+}
+.l-1{
+	/*background:red;*/
+	color:white;
+	width:650px;
+	text-align:left;
+	margin:0 auto;
+	margin-top:-30px;
+	font-size:13px;
+	line-height:27px;
+	font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+}
+}
+
+
+
+
+
+
+
+/*スマホ*/
+@media screen and (max-width: 480px) {
+/*ドロワー&ナブ*/
+header nav {
+	display: none;
+}
+/*メイン画像*/
+.pc{
+	display:none;
+}
+.sp{
+	display:block;
+	width:100%;
+	margin-top:-40px;
+}
+/*露伴*/
+.f-2{
+
+}
+#f-2{
+	width:100%;
+}
+/*動画*/
+.f-3{
+	background: url(images/back3.png);
+	width:100%;
+	height:300px;
+}
+#f-3{
+	width:60%;
+	margin:20px -80px -20px 80px;
+}
+#movie{
+	width:90%;
+	height:200px;
+	margin:40px -20px -40px 20px;border:solid #9f7203;
+}
+.f-4{
+	background:url(images/back1.png);
+	width:100%;
+	height:1200px;
+	padding-top:70px;
+}
+/*NEWS*/
+.f-5{
+	background:url(images/h-3.png) no-repeat left top / auto 100%,
+		       url(images/h-4.png) no-repeat right top / auto 100%;
+    height:550px;
+    margin-top:-20px;
+}
+#f-5{
+	width:50%;
+	margin:-20px -100px 20px 100px;
+}
+/*写真*/
+.f-6{
+	/*background:red;*/
+	width:100px;
+	height:500px;
+	margin:-50px -20px 50px 20px;
+}
+#f-6{
+	width:100%;
+	padding-top:40px;
+}
+/*文字*/
+.f-7{
+	/*background:pink;*/
+	width:230px;
+	height:500px;
+	margin:-520px -120px 520px 120px;
+	font-weight:600;
+	font-size:12px;
+}
+.f-7 a{
+	color:black;
+}
+.f-7 a:hover{
+	color:black;
+	text-decoration:none;
+}
+span{
+	color:#E4007E;
+}
+.f-7 p:nth-child(3){
+	margin-top:40px;
+	/*background:green;*/
+}
+.f-7 p:last-child {
+	margin-top:60px;
+	/*background:green;*/
+}
+#f-14{
+	width:60%;
+	margin:-480px -80px 480px 80px;
+}
+/*Twitter*/
+.f-8{
+	background:url(images/h-3.png) no-repeat left top / auto 100%,
+		       url(images/h-4.png) no-repeat right top / auto 100%;
+	height:400px;
+	margin-top:150px;
+}
+#f-12{
+	width:12%;
+	border-radius:50px;
+	margin:30px 160px -30px -160px;
+}
+.f-9{
+	/*background:red;*/
+	width:280px;
+	font-weight:600;
+	font-size:15px;
+	margin:-20px -80px 20px 80px;
+}
+span1{
+	display:none;
+}
+span3{
+	margin:50px -40px -50px 40px;
+}
+.s-1{
+	display:none;
+}
+/*CHARACTER*/
+.t-1{
+    background:linear-gradient(to top, #b2aa82, #fffbe9, #b2aa82);
+	width:100%;
+    height:800px;
+}
+#t-1{
+	width:70%;
+	margin:10px -60px -10px 60px;
+}
+#t-2{
+	width:27%;
+	margin-left:-270px
+}
+#t-3{
+	width:27%;
+	margin-left:170px;
+}
+/*スライド*/
+.slideshow {
+	margin-top:-250px;
+	position: relative;
+	overflow: hidden;
+}
+input[name="slideshow"] {
+	display: none;
+}
+/*スライド内容*/
+.slideContents {
+	height:700px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	user-select: none;
+	transition: transform .6s;
+	margin-top:260px;
+}
+.slideContents section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: translateX(100%);
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.slideContents section img {
+	max-width: 100%;
+	padding: 0 10px;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+/*矢印*/
+.arrow,
+.arrow label{
+	position: absolute;
+}
+.arrow {
+	top: 0;
+	margin: 0;
+	transition: background .3s;
+}
+.prev {
+	margin:550px -10px -550px 10px;
+}
+.next {
+	margin:545px -330px -545px 330px;
+}
+.arrow,
+.arrow label {
+	cursor: pointer;
+	width: 50px;
+	height: 100px;
+}
+.arrow label {
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+#t-97{
+	width:60%;
+}
+#t-98{
+	width:60%;
+}
+/*ジョルノ*/
+#t-41{
+	display:none;
+}
+#h-5{
+	/*background:blue;*/
+	width:100%;
+	height:700px;
+	margin-top:-350px;
+}
+#t-42{
+	width:45%;
+	margin:220px 110px -220px -110px;
+}
+#t-43{
+	width:45%;
+	margin:220px -140px -220px 140px;
+}
+/*ブチャラティ*/
+#t-51{
+	display:none;
+}
+#h-6{
+	/*background:blue;*/
+	width:100%;
+	height:700px;
+	margin-top:-350px;
+}
+#t-52{
+	width:40%;
+	margin:220px 100px -220px -100px;
+}
+#t-53{
+	width:30%;
+	margin:220px -130px -220px 130px;
+}
+/*ミスタ*/
+#t-61{
+	display:none;
+}
+#h-7{
+	/*background:blue;*/
+	width:100%;
+	height:700px;
+	margin-top:-375px;
+}
+#t-63{
+	width:45%;
+	margin:220px 0px -220px 0px;
+}
+#t-62{
+	width:30%;
+	margin:220px -50px -220px 50px;
+}
+/*アバッキオ*/
+#t-71{
+	display:none;
+}
+#h-8{
+	/*background:blue;*/
+	width:100%;
+	height:700px;
+	margin-top:-365px;
+}
+#t-72{
+	width:45%;
+	margin:220px 100px -220px -100px;
+}
+#t-73{
+	width:35%;
+	margin:220px -110px -220px 110px;
+}
+/*ナランチャ*/
+#t-81{
+	display:none;
+}
+#h-9{
+	/*background:blue;*/
+	width:100%;
+	height:700px;
+	margin-top:-365px;
+}
+#t-82{
+	width:30%;
+	margin:220px 150px -220px -150px;
+}
+#t-83{
+	width:55%;
+	margin:220px -110px -220px 110px;
+}
+/* :::::: mechanism :::::: */
+#switch1:checked ~ .slideContents #slide1,
+#switch2:checked ~ .slideContents #slide2,
+#switch3:checked ~ .slideContents #slide3,
+#switch4:checked ~ .slideContents #slide4,
+#switch5:checked ~ .slideContents #slide5 {
+	position: relative;
+	transform: none;
+}
+#switch1:checked ~ .slideContents #slide5,
+#switch1:checked ~ .slideContents #slide4,
+#switch2:checked ~ .slideContents #slide1,
+#switch2:checked ~ .slideContents #slide5,
+#switch3:checked ~ .slideContents #slide2,
+#switch3:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide3,
+#switch4:checked ~ .slideContents #slide2,
+#switch5:checked ~ .slideContents #slide4,
+#switch5:checked ~ .slideContents #slide3 {
+	transform: translateX(-100%);
+}
+#switch1:checked ~ .slideContents #slide3,
+#switch1:checked ~ .slideContents #slide4,
+#switch2:checked ~ .slideContents #slide4,
+#switch2:checked ~ .slideContents #slide5,
+#switch3:checked ~ .slideContents #slide5,
+#switch3:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide2,
+#switch5:checked ~ .slideContents #slide2,
+#switch5:checked ~ .slideContents #slide3 {
+	transition-duration: 0s;
+}
+
+/* :::::: arrow mechanism :::::: */
+.arrow label {
+	pointer-events: none;
+}
+#switch1:checked ~ .prev label[for="switch5"],
+#switch2:checked ~ .prev label[for="switch1"],
+#switch3:checked ~ .prev label[for="switch2"],
+#switch4:checked ~ .prev label[for="switch3"],
+#switch5:checked ~ .prev label[for="switch4"],
+#switch1:checked ~ .next label[for="switch2"],
+#switch2:checked ~ .next label[for="switch3"],
+#switch3:checked ~ .next label[for="switch4"],
+#switch4:checked ~ .next label[for="switch5"],
+#switch5:checked ~ .next label[for="switch1"] {
+	pointer-events: auto;
+}
+/*NAV*/
+.t-2{
+	background:url(images/h-back.png) no-repeat center top/ 100% auto;
+	height:300px;
+	margin-top:-5px;
+}
+#h-12{
+	width:70%;
+	margin:40px -50px -40px 50px;
+}
+.t-3{
+	/*background:red;*/
+	width:150px;
+	height:150px;
+	color:#9f7203;
+    font-weight:bold;
+    font-family:'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+	text-align:center;
+	margin:70px -50px -70px 50px;
+	line-height:25px;
+}
+.t-4{
+	/*background:blue;*/
+	width:150px;
+	height:150px;
+	color:#9f7203;
+    font-weight:bold;
+    font-family:'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+	text-align:center;
+	line-height:25px;
+	margin:-150px -150px 150px 150px;
+}
+#f-1{
+	width:30px;
+	margin:-150px -140px 150px 140px;
+}
+#f-20{
+	width:30px;
+	margin:-150px -160px 150px 160px;
+}
+.t-5{
+	display:none;
+}
+.t-6{
+	background:black;
+	width:100%;
+	height:280px;
+	padding-top:20px;
+
+}
+.t-6 ul{
+	/*background:red;*/
+	width:90%;
+	height:230px;
+	margin:0 auto;
+}
+#h-13{
+	width:50%;
+	margin-top:20px ;
+}
+.s{
+	/*background:blue;*/
+	margin:-235px -185px 235px 185px;
+	list-style: none;
+	width:150px;
+	height:150px;
+}
+#h-14{
+	width:100%;
+	margin-top:25px ;
+}
+/* 上に戻るボタン */
+.pagetop {
+	background-color: rgba(0,0,0,0.3);
+	text-decoration: none;
+	display: none;
+	position: fixed;
+	bottom: 8rem;
+	right: 4rem;
+	font-size: 1.5rem;
+	width: 3.3rem;
+	height: 3.3rem;
+	line-height: 3.3rem;
+	border-radius: 3.3rem;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+}
+.pagetop:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.200em);
+}
+#l-7{
+	width:180%;
+	margin:-10px 20px 10px -20px;
+}
+/*フッター*/
+footer{
+	margin-top:-5px;
+	background:black;
+	width:100%;
+	height:180px;
+}
+#l-6{
+	/*background:blue;*/
+	width:10%;
+	margin:3px -35px -30px 35px;
+}
+.l-1{
+	/*background:red;*/
+	color:white;
+	width:300px;
+	text-align:center;
+	margin:0 auto;
+	font-size:13px;
+	line-height:20px;
+	margin-top:30px;
+	font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+}
+}
